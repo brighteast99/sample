@@ -1,0 +1,10 @@
+const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+const db = {};
+db.mongoose = mongoose;
+db.uri = process.env.MONGODB_URI;
+db.question = require("./question.model");
+db.problem = require("./problem.model");
+db.object = require("./object.model");
+db.response = require("./response.model");
+module.exports = db;
